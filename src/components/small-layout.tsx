@@ -37,11 +37,13 @@ export default function SmallLayout({ children }: RootLayoutProps) {
         <>
             <html lang="en" suppressHydrationWarning>
                 <body className={`${montserrat.className} w-full`}>
-                    <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-                        <Navbar />
-                        {children}
-                        <Footer />
-                    </ThemeProvider>
+                    <div id="__next">
+                        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+                            <Navbar />
+                            {children}
+                            <Footer />
+                        </ThemeProvider>
+                    </div>
                 </body>
             </html>
         </>
