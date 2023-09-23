@@ -1,6 +1,6 @@
-import spendImg from "/public/assets/spend.png"
-import imageWallImg from "/public/assets/imagewall.png"
-import eCommerceImg from "/public/assets/eCommerce.png"
+import spendImg from "/src/assets/spend.png"
+import imageWallImg from "/src/assets/imagewall.png"
+import eCommerceImg from "/src/assets/eCommerce.png"
 
 
 export const projectsData: Array<projectsDataType> = [

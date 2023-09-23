@@ -1,5 +1,4 @@
-import Link from "next/link";
-import Image from "next/image";
+import {Link} from "react-router-dom"
 import { motion } from "framer-motion";
 import { LinkIcon, Github } from "lucide-react";
 
@@ -24,7 +23,7 @@ export default function ProjectSection() {
             transition={{ ease: "easeOut", duration: 0.5, delay: 0.5 }}
         >
             <div className="space-y-3 md:space-y-6">
-                <h1 className="text-5xl text-sky-500 font-bold text-center ">
+                <h1 className="text-5xl text-orange-500 dark:text-yellow-500 font-bold text-center ">
                     Projects
                 </h1>
                 <p className="text-center text-md sm:text-xl">
@@ -47,7 +46,7 @@ export default function ProjectSection() {
                             </CardHeader>
 
                             <CardContent className="space-y-5">
-                                <Image
+                                <img
                                     src={data.img}
                                     alt=""
                                     width={600}
@@ -61,16 +60,15 @@ export default function ProjectSection() {
                                     ))}
                                 </ul>
 
-                                <CardFooter className="flex flex-row justify-center gap-x-12 w-fit mx-auto border-2 border-zinc-500 p-3 rounded-3xl">
+                                <CardFooter className="flex flex-row justify-center gap-x-12 w-fit mx-auto border-2 border-zinc-500 p-3 rounded-2xl">
                                     <Link
-                                        href={data.liveLink}
+                                        to={data.liveLink}
                                         target="_blank"
                                     >
                                         <LinkIcon className="hover:scale-125 transition-all duration-200" />
                                     </Link>
-
                                     <Link
-                                        href={data.githubLink}
+                                        to={data.githubLink}
                                         target="_blank"
                                     >
                                         <Github className="hover:scale-125 transition-all duration-200" />

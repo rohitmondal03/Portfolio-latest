@@ -1,7 +1,31 @@
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import { useMediaQuery } from "usehooks-ts";
 
 import { socialLinks } from "./data/social-links";
+
+
+const creditLinks: Array<{ redirect: string, title: string }> = [
+    {
+        redirect: "https://nextjs.org",
+        title: "nextjs"
+    },
+    {
+        redirect: "https://tailwindcss.com/",
+        title: "TailwindCSS"
+    },
+    {
+        redirect: "https://www.framer.com/motion/",
+        title: "Framer Motion"
+    },
+    {
+        redirect: "https://ui.shadcn.com/",
+        title: "shadcnUI"
+    },
+    {
+        redirect: "https://usehooks-ts.com",
+        title: "usehooks-ts"
+    },
+]
 
 
 export default function Footer() {
@@ -16,26 +40,14 @@ export default function Footer() {
                 <div>
                     <h1 className="font-bold text-lg text-left">Credits</h1>
 
-                    <ol className="footer-credit-list list-decimal text-left">
-                        <li>
-                            <Link href={`https://nextjs.org`} target="_blank">nextjs</Link>
-                        </li>
-
-                        <li>
-                            <Link href={`https://tailwindcss.com/`} target="_blank">TailwindCSS</Link>
-                        </li>
-
-                        <li>
-                            <Link href={`https://www.framer.com/motion/`} target="_blank">Framer Motion</Link>
-                        </li>
-
-                        <li>
-                            <Link href={`https://ui.shadcn.com/`} target="_blank">shadcnUI</Link>
-                        </li>
-
-                        <li>
-                            <Link href={`https://usehooks-ts.com/`} target="_blank">usehooks-ts</Link>
-                        </li>
+                    <ol className="footer-credit-list text-zinc-300 dark:text-zinc-600 list-decimal text-left">
+                        {creditLinks.map((data) => (
+                            <li>
+                                <Link to={data.redirect}>
+                                    {data.title}
+                                </Link>
+                            </li>
+                        ))}
                     </ol>
                 </div>
             </div>
@@ -46,7 +58,7 @@ export default function Footer() {
                 <ul className="flex flex-row gap-x-1 sm:gap-x-3">
                     {socialLinks.map((links: socialLinksType) => (
                         <Link
-                            href={links.link}
+                            to={links.link}
                             target="_blank"
                             className="scale-90 sm:scale-100 hover:scale-125 hover:rotate-[360deg] duration-500 transition-all"
                             key={links.link}

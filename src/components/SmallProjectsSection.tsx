@@ -1,11 +1,11 @@
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import { useMediaQuery } from "usehooks-ts"
 import { motion } from "framer-motion";
 import { GithubIcon, LinkIcon } from "lucide-react";
 
-import { smallProjectsData } from "./data/small-projects-data";
 import { Alert, AlertTitle, AlertDescription } from "@/components/ui/alert"
 import { Button } from "@/components/ui/button";
+import { smallProjectsData } from "./data/small-projects-data";
 
 
 
@@ -36,7 +36,7 @@ export default function SmallProjectsSection() {
 
 
     return (
-        <section className={`${secondMediaQuery ? "flex-col gap-y-10 py-24" : "flex-row"} ${mediaQuery ? "gap-x-2 px-6 py-12" : "gap-x-10 p-12"} flex items-center justify-evenly`}>
+        <section className={`${secondMediaQuery ? "flex-col gap-y-10 py-24" : "flex-row"} ${mediaQuery ? "gap-x-2 px-6 py-12" : "gap-x-10 p-12"} flex items-center justify-evenly overflow-x-hidden`}>
             <div>
                 <motion.h1
                     className={`${mediaQuery ? "text-3xl" : "text-4xl"} font-bold`}
@@ -67,14 +67,14 @@ export default function SmallProjectsSection() {
                                 <h1>{data.abt}</h1>
 
                                 <div className="mt-5 flex flex-col xs:flex-row gap-y-3 xs:gap-x-[10px]">
-                                    <Link href={data.liveLink} target="_blank">
+                                    <Link to={data.liveLink} target="_blank">
                                         <Button>
                                             Link
                                             <LinkIcon className="h-5 w-5 ml-2" />
                                         </Button>
                                     </Link>
 
-                                    <Link href={data.githubLink} target="_blank">
+                                    <Link to={data.githubLink} target="_blank">
                                         <Button variant={"secondary"}>
                                             Github
                                             <GithubIcon className="h-5 w-5 ml-2" />
