@@ -43,7 +43,7 @@ const SkillsDescription = () => {
         >
 
             <h1 className={`${isScreenWidthLessThan1000px ? "text-2xl sm:text-3xl md:text-4xl text-center" : "text-5xl"} font-bold leading-tight animated-class`}>
-                Experienced in <span>HTML</span>, <span>CSS</span>, <span>JavaScript</span>, <span>TypeScript</span>, <span>ReactJS</span> and <span>Redux</span> I create captivating websites that seamlessly integrate with <span>Backend as a Service (BaaS)</span> platforms. Ensuring cross-browser compatibility and pixel-perfect responsiveness is my commitment to delivering outstanding user experiences.
+                Experienced in <span>HTML</span>, <span>CSS</span>, <span>JavaScript</span>, <span>TypeScript</span>, <span>ReactJS</span> and <span>Redux</span>, I create captivating websites that seamlessly integrate with <span>Backend as a Service (BaaS)</span> platforms. Ensuring cross-browser compatibility and pixel-perfect responsiveness is my commitment to delivering outstanding user experiences.
             </h1>
         </motion.section>
     )

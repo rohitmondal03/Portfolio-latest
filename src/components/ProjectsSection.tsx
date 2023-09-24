@@ -1,4 +1,4 @@
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
 import { motion } from "framer-motion";
 import { LinkIcon, Github } from "lucide-react";
 
@@ -11,6 +11,7 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card";
+import { Separator } from "./ui/separator";
 
 
 
@@ -60,13 +61,19 @@ export default function ProjectSection() {
                                     ))}
                                 </ul>
 
-                                <CardFooter className="flex flex-row justify-center gap-x-12 w-fit mx-auto border-2 border-zinc-500 p-3 rounded-2xl">
+                                <CardFooter className="flex flex-row justify-center gap-x-6 w-fit mx-auto border-[3px] border-zinc-500 px-3 py-3 rounded-3xl">
                                     <Link
                                         to={data.liveLink}
                                         target="_blank"
                                     >
                                         <LinkIcon className="hover:scale-125 transition-all duration-200" />
                                     </Link>
+
+                                    <Separator
+                                        orientation="vertical"
+                                        className="bg-black dark:bg-white h-[20px] m-0 p-0"
+                                    />
+
                                     <Link
                                         to={data.githubLink}
                                         target="_blank"
