@@ -5,7 +5,8 @@ import eCommerceImg from "/src/assets/eCommerce.png"
 
 export const projectsData: Array<projectsDataType> = [
     {
-        title: "1. SpeND",
+        id: 1,
+        title: "SpeND",
         desc: "SpeND, redifining the way credit card services work.",
         img: spendImg,
         featuresList: [
@@ -19,7 +20,8 @@ export const projectsData: Array<projectsDataType> = [
     },
 
     {
-        title: "2. ImageWall",
+        id: 2,
+        title: "ImageWall",
         desc: "A simple web application, to store all your photos at one place.",
         img: imageWallImg,
         featuresList: [
@@ -32,6 +34,7 @@ export const projectsData: Array<projectsDataType> = [
     },
 
     {
+        id: 3,
         title: "E-Cart App",
         desc: "Simple E-Commerce app made with Redux.",
         img: eCommerceImg,

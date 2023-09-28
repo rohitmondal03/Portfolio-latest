@@ -2,30 +2,7 @@ import { Link } from "react-router-dom";
 import { useMediaQuery } from "usehooks-ts";
 
 import { socialLinks } from "./data/social-links";
-
-
-const creditLinks: Array<{ redirect: string, title: string }> = [
-    {
-        redirect: "https://nextjs.org",
-        title: "nextjs"
-    },
-    {
-        redirect: "https://tailwindcss.com/",
-        title: "TailwindCSS"
-    },
-    {
-        redirect: "https://www.framer.com/motion/",
-        title: "Framer Motion"
-    },
-    {
-        redirect: "https://ui.shadcn.com/",
-        title: "shadcnUI"
-    },
-    {
-        redirect: "https://usehooks-ts.com",
-        title: "usehooks-ts"
-    },
-]
+import { creditLinks } from "./data/tect-stack-credit-data"
 
 
 export default function Footer() {
@@ -35,14 +12,14 @@ export default function Footer() {
         <footer className={`${mediaQuery ? "justify-between" : ""} flex flex-col gap-y-5 px-4 sm:px-10 md:px-0 py-6 bg-black text-white dark:bg-zinc-100 dark:text-black text-center`}>
 
             <div className="flex flex-col sm:flex-row gap-y-3 items-center justify-between md:justify-around">
-                <h1 className="text-lg">Developed with ❣️ <br /> <span className="underline font-bold text-xl">@Rohit Mondal</span> </h1>
+                <h1 className="text-lg">Developed with ❣️<br /> <span className="underline font-bold text-xl">@rohit_mondal</span> </h1>
 
                 <div>
                     <h1 className="font-bold text-lg text-left">Credits</h1>
 
                     <ol className="footer-credit-list text-zinc-300 dark:text-zinc-600 list-decimal text-left">
                         {creditLinks.map((data) => (
-                            <li>
+                            <li key={data.redirect}>
                                 <Link to={data.redirect}>
                                     {data.title}
                                 </Link>

@@ -8,6 +8,7 @@ import ProjectSection from "./components/ProjectsSection"
 import SmallProjectsSection from "./components/SmallProjectsSection"
 import Footer from "./components/Footer"
 import './App.css'
+import { TooltipProvider } from "./components/ui/tooltip"
 
 
 
@@ -26,12 +27,14 @@ export default function App() {
 
     return (
         <>
-            <Navbar />
-            <IntroSection />
-            <SkillsDescription />
-            <ProjectSection />
-            <SmallProjectsSection />
-            <Footer />
+            <TooltipProvider>
+                <Navbar />
+                <IntroSection />
+                <SkillsDescription />
+                <ProjectSection />
+                <SmallProjectsSection />
+                <Footer />
+            </TooltipProvider>
         </>
     )
 }

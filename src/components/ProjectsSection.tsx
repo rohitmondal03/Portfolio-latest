@@ -2,7 +2,8 @@ import { Link } from "react-router-dom"
 import { motion } from "framer-motion";
 import { LinkIcon, Github } from "lucide-react";
 
-import { projectsData } from "@/components/data/projects-data";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import { Separator } from "@/components/ui/separator";
 import {
     Card,
     CardContent,
@@ -11,7 +12,7 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card";
-import { Separator } from "./ui/separator";
+import { projectsData } from "../components/data/projects-data";
 
 
 
@@ -36,10 +37,10 @@ export default function ProjectSection() {
             <motion.div className="flex flex-wrap flex-row mx-auto gap-y-12">
                 {projectsData.map((data: projectsDataType) => {
                     return (
-                        <Card className="w-fit mx-auto border-2 border-zinc-400" key={data.liveLink}>
+                        <Card className="w-fit mx-auto border-2 border-zinc-400" key={data.id}>
                             <CardHeader className="text-center">
                                 <CardTitle className="font-bold text-3xl">
-                                    {data.title}
+                                    {data.id} {data.title}
                                 </CardTitle>
                                 <CardDescription className="text-sm sm:text-lg">
                                     {data.desc}
@@ -61,25 +62,39 @@ export default function ProjectSection() {
                                     ))}
                                 </ul>
 
-                                <CardFooter className="flex flex-row justify-center gap-x-6 w-fit mx-auto border-[3px] border-zinc-500 px-3 py-3 rounded-3xl">
-                                    <Link
-                                        to={data.liveLink}
-                                        target="_blank"
-                                    >
-                                        <LinkIcon className="hover:scale-125 transition-all duration-200" />
-                                    </Link>
+                                <CardFooter className="flex flex-row justify-center gap-x-6 w-fit mx-auto border-[3px] border-zinc-500 px-3 py-2 rounded-3xl">
+                                    <Tooltip>
+                                        <TooltipTrigger asChild>
+                                            <Link
+                                                to={data.liveLink}
+                                                target="_blank"
+                                            >
+                                                <LinkIcon className="hover:scale-125 transition-all duration-200" />
+                                            </Link>
+                                        </TooltipTrigger>
+                                        <TooltipContent className="bg-black text-white dark:bg-white dark:text-black">
+                                            <p>{data.liveLink}</p>
+                                        </TooltipContent>
+                                    </Tooltip>
 
                                     <Separator
                                         orientation="vertical"
                                         className="bg-black dark:bg-white h-[20px] m-0 p-0"
                                     />
 
-                                    <Link
-                                        to={data.githubLink}
-                                        target="_blank"
-                                    >
-                                        <Github className="hover:scale-125 transition-all duration-200" />
-                                    </Link>
+                                    <Tooltip>
+                                        <TooltipTrigger asChild>
+                                            <Link
+                                                to={data.githubLink}
+                                                target="_blank"
+                                            >
+                                                <Github className="hover:scale-125 transition-all duration-200" />
+                                            </Link>
+                                        </TooltipTrigger>
+                                        <TooltipContent className="bg-black text-white dark:bg-white dark:text-black">
+                                            <p>Github link of {data.title}</p>
+                                        </TooltipContent>
+                                    </Tooltip>
                                 </CardFooter>
                             </CardContent>
                         </Card>

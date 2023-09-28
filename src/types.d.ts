@@ -7,6 +7,7 @@ type smallProjectsDataTypes = {
 }
 
 type projectsDataType = {
+    id: number
     title: string,
     desc: string,
     img: StaticImageData,
@@ -19,4 +20,9 @@ type socialLinksType = {
     title: string,
     icon: LucideIcon,
     link: string
+}
+
+type creditLinkType = {
+    redirect: string
+    title: string
 }
