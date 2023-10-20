@@ -62,11 +62,10 @@
   color: #888;
 }
 
-
 ::-webkit-scrollbar {
-    @apply bg-transparent;
+  @apply bg-transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-    @apply bg-zinc-600 rounded-full ;
+  @apply bg-zinc-600 rounded-full;
 }
