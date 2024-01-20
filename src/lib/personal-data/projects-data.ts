@@ -1,8 +1,8 @@
-import spendImg from "/src/assets/spend.png"
-import imageWallImg from "/src/assets/imagewall.png"
-import eCommerceImg from "/src/assets/eCommerce.png"
 import opentypedImg from "/src/assets/opentyped.png"
 import biosyncImg from "/src/assets/bioSync.png"
+// import spendImg from "/src/assets/spend.png"
+// import imageWallImg from "/src/assets/imagewall.png"
+// import eCommerceImg from "/src/assets/eCommerce.png"
 
 
 export const projectsData: Array<projectsDataType> = [
