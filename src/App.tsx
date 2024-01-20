@@ -1,14 +1,14 @@
 import { useEffect } from "react"
 import Lenis from "@studio-freight/lenis"
 
-import Navbar from "./components/common/Navbar"
+import Navbar from "./components/shared/Navbar"
 import SkillsDescription from "./components/SkillsDescription"
 import IntroSection from "./components/IntroSection"
 import ProjectSection from "./components/ProjectsSection"
 import SmallProjectsSection from "./components/SmallProjectsSection"
-import Footer from "./components/common/Footer"
-import './App.css'
+import Footer from "./components/shared/Footer"
 import { TooltipProvider } from "./components/ui/tooltip"
+import './App.css'
 
 
 

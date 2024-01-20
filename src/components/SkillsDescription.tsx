@@ -7,9 +7,6 @@ import { useMediaQuery } from "usehooks-ts";
 import classNames from "classnames";
 
 
-gsap.registerPlugin(ScrollTrigger);
-
-
 const SkillsDescription = () => {
   const isScreenWidthLessThan1000px = useMediaQuery(`(max-width: 1000px)`);
 
@@ -55,7 +52,7 @@ const SkillsDescription = () => {
         "font-bold leading-tight animated-class": true,
       })}
       >
-        Experienced in <span>HTML</span>, <span>CSS</span>, <span>JavaScript</span>, <span>TypeScript</span>, <span>ReactJS</span> and <span>Redux</span>, I create captivating websites that seamlessly integrate with <span>Backend as a Service (BaaS)</span> platforms. Ensuring cross-browser compatibility and pixel-perfect responsiveness is my commitment to delivering outstanding user experiences.
+        Experienced in <span>HTML</span>, <span>CSS</span>, <span>JavaScript</span>, <span>TypeScript</span>, <span>ReactJS</span>, <span>NextJS</span>, <span>Redux</span> and <span>Jotai</span>, I create captivating websites that seamlessly integrate with <span>Backend as a Service (BaaS)</span> platforms, ensuring cross-browser compatibility and pixel-perfect responsiveness is my commitment to delivering outstanding user experiences.
       </h1>
     </motion.section>
   )

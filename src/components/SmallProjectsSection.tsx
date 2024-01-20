@@ -6,7 +6,7 @@ import classNames from "classnames";
 
 import { Alert, AlertTitle, AlertDescription } from "@/components/ui/alert"
 import { Button } from "@/components/ui/button";
-import { smallProjectsData } from "../self_data/small-projects-data";
+import { smallProjectsData } from "@/lib/personal-data/small-projects-data";
 
 
 

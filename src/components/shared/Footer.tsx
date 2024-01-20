@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import { useMediaQuery } from "usehooks-ts";
 import { motion } from "framer-motion"
-
-import { socialLinks } from "../../self_data/social-links";
-import { creditLinks } from "../../self_data/tect-stack-credit-data"
 import classNames from "classnames";
+
+import { socialLinks } from "@/lib/personal-data/social-links";
+import { creditLinks } from "@/lib/personal-data/tect-stack-credit-data";
 
 
 export default function Footer() {

@@ -12,8 +12,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { projectsData } from "../self_data/projects-data";
-
+import { projectsData } from "@/lib/personal-data/projects-data";
 
 
 export default function ProjectSection() {
@@ -37,7 +36,7 @@ export default function ProjectSection() {
       <motion.div className="grid grid-cols-1 md:grid-cols-2 mx-auto md:gap-x-4 gap-y-6">
         {projectsData.map((data: projectsDataType) => {
           return (
-            <Card className="w-fit mx-auto rounded-2xl sm:rounded-3xl border-2 border-zinc-600 dark:border-zinc-500" key={data.id}>
+            <Card className="w-fit mx-auto rounded-2xl sm:rounded-3xl border-4 border-zinc-400 dark:border-zinc-400" key={data.id}>
               <CardHeader className="text-center">
                 <CardTitle className="font-bold text-3xl">
                   {data.id}. {data.title}
