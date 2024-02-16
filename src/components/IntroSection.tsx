@@ -6,7 +6,6 @@ import classNames from "classnames"
 
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
-import { Button } from "@/components/ui/button"
 
 import ProfileLoadImg from "../assets/smallProfilePhoto.jpg"
 import ProfilePhoto from "../assets/MyPhoto.jpg"
