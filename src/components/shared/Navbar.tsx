@@ -9,15 +9,14 @@ import { socialLinks } from "@/lib/personal-data/social-links";
 
 export default function Navbar() {
   return (
-    <nav className="py-6 md:mb-10 flex flex-row items-center justify-around md:justify-evenly border-b-2 border-b-gray-500">
+    <nav className="py-6 px-10 md:px-0 md:mb-10 flex flex-row items-center justify-between md:justify-evenly border-b-2 border-b-gray-500">
       <h1 className="text-3xl xs:text-4xl font-bold">Portfolio</h1>
 
-      <ul className="hidden md:flex md:flex-row md:items-center md:justify-center md:gap-x-4 lg:gap-x-12">
+      <ul className="hidden md:flex md:flex-row md:items-center md:justify-center md:gap-x-4 lg:gap-x-8">
         {socialLinks.map((link) => (
           <Link
             to={link.link}
-            className="flex flex-row md:text-sm lg:text-lg md:gap-x-1 lg:gap-x-3 items-center md:hover:scale-110 md:transition-all"
-            // md:border-2 lg:border-4 border-slate-500 dark:border-orange-500 md:p-2 lg:px-3 lg:py-2 md:rounded-2xl lg:rounded-3xl
+            className="flex flex-row md:text-sm lg:text-lg md:gap-x-1 lg:gap-x-3 items-center md:scale-90 md:hover:scale-100 md:transition-all"
             target="_blank"
             key={link.link}
           >
@@ -42,10 +41,10 @@ export default function Navbar() {
 
             <div className="mt-10">
               <ul className="flex flex-col items-center justify-center text-xl my-20 gap-y-5 md:gap-y-7">
-                {socialLinks.map((links: socialLinksType) => (
+                {socialLinks.map((links) => (
                   <Link
                     to={links.link}
-                    className="flex flex-row gap-x-4 items-center border-b-2 border-zinc-800 dark:border-zinc-300 hover:scale-110 transition-all"
+                    className="text-muted-foreground flex flex-row gap-x-4 items-center border-b-2 border-zinc-800 dark:border-zinc-300 scale-90 transition-all"
                     target="_blank"
                     key={links.link}
                   >

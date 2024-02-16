@@ -4,6 +4,8 @@ import { useMediaQuery } from "usehooks-ts"
 import { motion } from "framer-motion"
 import classNames from "classnames"
 
+import { cn } from "@/lib/utils";
+import { buttonVariants } from "@/components/ui/button";
 import { Button } from "@/components/ui/button"
 
 import ProfileLoadImg from "../assets/smallProfilePhoto.jpg"
@@ -53,10 +55,16 @@ export default function IntroSection() {
           I&apos;m a aspiring frontend developer with expertise in NextJS, ReactJS, TypeScript and Javascript. My passion lies in crafting seamless web experiences, with a knack for integrating backend services and APIs. Let&apos;s explore how my skills can transform your digital vision into reality.
         </p>
 
-        <Link to={`https://flowcv.com/resume/vgsaaqno90`} target="_blank">
-          <Button className="mt-4 font-bold mx-auto">
-            Resume
-          </Button>
+        <Link
+          to={`https://flowcv.com/resume/vgsaaqno90`}
+          target="_blank"
+          className={cn(buttonVariants({
+            size: "lg",
+            variant: "default",
+            className: "mt-4 font-bold mx-auto"
+          }))}
+        >
+          Resume
         </Link>
       </div>
 

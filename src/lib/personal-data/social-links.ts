@@ -1,4 +1,4 @@
-import { Github, Linkedin, Twitter, MailCheckIcon } from "lucide-react"
+import { Github, Linkedin, Twitter, MailCheckIcon, Paperclip } from "lucide-react"
 
 
 export const socialLinks: socialLinksType[] = [
@@ -16,6 +16,11 @@ export const socialLinks: socialLinksType[] = [
     title: "LinkedIn",
     icon: Linkedin,
     link: "https://www.linkedin.com/in/rohit-mondal-61662a16b/"
+  },
+  {
+    title: "Resume",
+    icon: Paperclip,
+    link: "https://flowcv.com/resume/vgsaaqno90",
   },
   {
     title: "Email",

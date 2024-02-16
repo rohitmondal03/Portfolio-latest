@@ -23,15 +23,15 @@ export default function ModeToggle() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem className="cursor-cell" onClick={() => setTheme("light")}>
+        <DropdownMenuItem className="cursor-pointer" onClick={() => setTheme("light")}>
           <Sun className="mr-3 scale-75" />
           Light
         </DropdownMenuItem>
-        <DropdownMenuItem className="cursor-cell" onClick={() => setTheme("dark")}>
+        <DropdownMenuItem className="cursor-pointer" onClick={() => setTheme("dark")}>
           <Moon className="mr-3 scale-75" />
           Dark
         </DropdownMenuItem>
-        <DropdownMenuItem className="cursor-cell" onClick={() => setTheme("system")}>
+        <DropdownMenuItem className="cursor-pointer" onClick={() => setTheme("system")}>
           <Computer className="mr-3 scale-75" />
           System
         </DropdownMenuItem>

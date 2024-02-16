@@ -50,8 +50,8 @@ export default function ProjectSection() {
                 <img
                   src={data.img}
                   alt=""
-                  width={600}
-                  height={600}
+                  width={500}
+                  height={500}
                   className="border-2 border-zinc-600 rounded-lg p-1 mx-auto"
                 />
 
